@@ -1,64 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blink - Anshuman Bahekar</title>
-<style src="./style.css"></style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blink</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-  <h1>Reflex</h1>
-  <div class="rank-badge" id="rank-badge">Loading...</div>
-</header>
+  <div id="app">
+    <h1>Blink</h1>
+    <p class="desc">Blink and you'll miss it. Don't blink.</p>
 
-<div class="arena">
-  <canvas id="particle-canvas" width="420" height="420"></canvas>
-  <div id="target" class="waiting" role="button" aria-label="Click when circle turns amber" tabindex="0">
-    <span id="target-label">Click<br>to start</span>
+    <div id="circle">click to start</div>
+
+    <div id="time"></div>
+    <div id="label"></div>
+
+    <div class="row">
+      <div class="stat"><span id="s-best">—</span><span>best</span></div>
+      <div class="stat"><span id="s-avg">—</span><span>avg</span></div>
+      <div class="stat"><span id="s-count">0</span><span>tries</span></div>
+      <div class="stat"><span id="s-streak">0</span><span>streak</span></div>
+    </div>
+
+    <div id="bars"></div>
+    <div id="history-label">last 20 attempts</div>
+
+    <button id="reset">reset</button>
   </div>
-</div>
 
-<div id="last-result"></div>
-<div id="result-label"></div>
-
-<div class="stats-row">
-  <div class="stat">
-    <div class="stat-value" id="stat-best">—</div>
-    <div class="stat-label">Best (ms)</div>
-  </div>
-  <div class="divider"></div>
-  <div class="stat">
-    <div class="stat-value" id="stat-avg">—</div>
-    <div class="stat-label">Avg (ms)</div>
-  </div>
-  <div class="divider"></div>
-  <div class="stat">
-    <div class="stat-value" id="stat-count">0</div>
-    <div class="stat-label">Attempts</div>
-  </div>
-  <div class="divider"></div>
-  <div class="stat">
-    <div class="stat-value" id="stat-streak">0</div>
-    <div class="stat-label">Streak</div>
-  </div>
-</div>
-
-<div class="history-section">
-  <div class="history-title">Last 20 attempts</div>
-  <div class="history-bars" id="history-bars"></div>
-  <div class="history-axis">
-    <span>fast</span>
-    <span id="axis-max">—</span>
-    <span>slow</span>
-  </div>
-</div>
-
-<button id="reset-btn">Reset all stats</button>
-
-<div class="rank-unlock" id="rank-toast"></div>
-
-<script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
